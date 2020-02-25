@@ -33,7 +33,7 @@ while count < nguesses:
     else:
         print('Please enter a valid character')
 
-if '_' in underscore:
+if '_' in underscores:
     reveal = 'The word was {}.'.format(randomword)
     print('You lose :(')
     print(reveal)
