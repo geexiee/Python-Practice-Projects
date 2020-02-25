@@ -33,4 +33,6 @@ while count < nguesses:
     else:
         print('Please enter a valid character')
 
+reveal = 'The word was {}.'.format(randomword)
 print('You lose :(')
+print(reveal)
