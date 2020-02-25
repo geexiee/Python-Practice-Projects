@@ -15,7 +15,7 @@ print(underscores)
 
 while count < nguesses:
     guess = input('Guess a letter: ')
-    if guess.isalpha() or len(guess) > 1:
+    if guess.isalpha() and len(guess) == 1:
         if guess in randomword:
             j = 0
             while j < len(randomword):
@@ -30,7 +30,7 @@ while count < nguesses:
         if '_' not in underscores:
             print('Congratulations, you win!')
             break
-        else:
-            print('Please enter a valid character')
+    else:
+        print('Please enter a valid character')
 
 print('You lose :(')
