@@ -5,7 +5,7 @@ with open("sowpods.txt", "r") as dictionary:
 randomword = random.choice(wordlist).strip()
 count = 0
 wordlen = len(randomword)
-nguesses = wordlen+1
+nguesses = wordlen+3
 intro = 'Welcome to hangman! Please enter individual characters to guess the word. This word has {} letters in it. You have {} guesses to figure out what the word is.'.format(wordlen,nguesses )
 print(intro)
 underscores = ''
@@ -33,6 +33,7 @@ while count < nguesses:
     else:
         print('Please enter a valid character')
 
-reveal = 'The word was {}.'.format(randomword)
-print('You lose :(')
-print(reveal)
+if '_' in underscore:
+    reveal = 'The word was {}.'.format(randomword)
+    print('You lose :(')
+    print(reveal)
