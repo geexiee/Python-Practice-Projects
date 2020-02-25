@@ -14,7 +14,7 @@ for i in randomword:
 print(underscores)
 
 while count < nguesses:
-    guess = input('Guess a letter: ')
+    guess = input('Guess a letter: ').lower()
     if guess.isalpha() and len(guess) == 1:
         if guess in randomword:
             j = 0
